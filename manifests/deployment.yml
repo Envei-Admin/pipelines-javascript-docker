@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: enveiadminpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: enveiadminpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: enveiadminpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: enveiadminpipelinesjavascriptdocker 
+          image: myappcrk8s.azurecr.io/enveiadminpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
